@@ -12,6 +12,7 @@ struct MainTabView: View {
     init() {
         makeTabBarOpaque()
     }
+    
     var body: some View {
         TabView {
             UpdatesTabScreen()
@@ -26,19 +27,19 @@ struct MainTabView: View {
                     Text(Tab.calls.title)
                 }
             
-            placeholderView("Communities")
+            CommunityTabScreen()
                 .tabItem {
                     Image(systemName: Tab.communities.icon)
                     Text(Tab.communities.title)
                 }
             
-            placeholderView("Chats")
+            ChannelTabScreen()
                 .tabItem {
                     Image(systemName: Tab.chats.icon)
                     Text(Tab.chats.title)
                 }
             
-            placeholderView("Settings")
+            SettingsTabScreen()
                 .tabItem {
                     Image(systemName: Tab.settings.icon)
                     Text(Tab.settings.title)
